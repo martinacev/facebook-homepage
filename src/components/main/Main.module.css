@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    border-radius: 20px;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.profilePic {
+    display: flex;
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.profilePic:hover {
+    transform: scale(1.1px);
+    animation: bounce 1s infinite;
+}
+
+.person{
+    background-image: url("../../../public/nothing.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgb(236, 235, 235);
+	height: 200px;
+	width: 150px;
+    border-radius: 10px;
+}
+
+.personThird{
+    background-image: url("../../../public/lastjob.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgb(236, 235, 235);
+	height: 200px;
+	width: 150px;
+    border-radius: 10px;
+}
+
+.istoProgramiranje{
+    background-image: url("../../../public/itsektor.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgb(236, 235, 235);
+	height: 200px;
+	width: 150px;
+    border-radius: 10px;
+}
+
+
+.profile{
+    background-image: url("../../../public/maci.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgb(236, 235, 235);
+	height: 200px;
+	width: 150px;
+    border-radius: 10px;
+}
+
+.text {
+    display: flex;
+    margin-top: 180px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: #fff;
+}

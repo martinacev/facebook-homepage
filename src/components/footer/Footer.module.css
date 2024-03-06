@@ -1,12 +1,14 @@
 .container {
 	display: flex;
-	margin: 0px 300px;
+	flex-direction: column;
+	width: 300px;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
 	margin-top: 15px;
+	height: 100vh;
 }
 
 .myProfile {

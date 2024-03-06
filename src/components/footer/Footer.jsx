@@ -2,6 +2,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import classes from "./Footer.module.css";
 import PropTypes from "prop-types";
 
+
 const MenuItem = ({ icon, text }) => (
 	<div className={classes.myProfile}>
 		<img
