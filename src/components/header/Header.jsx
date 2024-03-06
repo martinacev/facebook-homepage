@@ -1,6 +1,6 @@
 import classes from "./Header.module.css";
-import fb from "../../../public/facebook.png";
-import pp from '../../../public/maci.jpg';
+import fb from "/facebook.png";
+import pp from '/public/maci.jpg';
 
 const Header = () => {
 	return (

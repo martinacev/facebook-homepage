@@ -22,26 +22,26 @@ MenuItem.propTypes = {
 
 const Footer = () => {
 	const menuItems = [
-		{ icon: "../../../public/maci.jpg", text: "Martin Acevski" },
-		{ icon: "../../../public/friends.png", text: "Friends" },
-		{ icon: "../../../public/memories.png", text: "Memories" },
-		{ icon: "../../../public/saved.png", text: "Saved" },
-		{ icon: "../../../public/groupFuter.png", text: "Group" },
-		{ icon: "../../../public/videoFooter.png", text: "Video" },
+		{ icon: "/maci.jpg", text: "Martin Acevski" },
+		{ icon: "/friends.png", text: "Friends" },
+		{ icon: "/memories.png", text: "Memories" },
+		{ icon: "/saved.png", text: "Saved" },
+		{ icon: "/groupFuter.png", text: "Group" },
+		{ icon: "/videoFooter.png", text: "Video" },
 	];
 
 	const shortcuts = [
 		{
-			icon: "../../../public/itsektor.jpg",
+			icon: "/itsektor.jpg",
 			text: "Сојуз Комитет на Програмери на Република Македонија",
 		},
-		{ icon: "../../../public/avtoapaza.jpg", text: "AVTOPAZAR MAKEDONIJA" },
+		{ icon: "/avtoapaza.jpg", text: "AVTOPAZAR MAKEDONIJA" },
 		{
-			icon: "../../../public/istoProgramiranje.jpg",
+			icon: "/istoProgramiranje.jpg",
 			text: "Работа и Вработување во ИТ Сектор",
 		},
 		{
-			icon: "../../../public/lastjob.jpg",
+			icon: "/public/lastjob.jpg",
 			text: "Сојуз Комитет на Програмери на Република Македонија",
 		},
 	];
