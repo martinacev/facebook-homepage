@@ -1,0 +1,85 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #242526;
+	width: 100%;
+	justify-content: space-between;
+	border-bottom: 1px solid #3a3b3c;
+}
+
+.facebookLogo {
+	display: flex;
+	margin-left: 5px;
+}
+
+.searchFb {
+	display: flex;
+	margin-left: 5px;
+}
+
+.search {
+	border-radius: 20px;
+	background-color: #3a3b3c;
+	border: none;
+	width: 200px;
+	height: 35px;
+	padding-left: 20px;
+	outline: none;
+}
+
+.search::placeholder {
+	color: #b0b3b8;
+}
+
+.tools {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrap {
+	display: flex;
+	align-items: center;
+}
+
+.components {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 110px;
+	height: 40px;
+}
+
+.components:hover {
+	background-color: #3a3b3c;
+	border-radius: 10px;
+}
+
+.svgWrapper {
+	display: flex;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #3a3b3c;
+	border-radius: 20px;
+	margin: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+.box:hover {
+	background-color: rgba(255, 255, 255, 0.267);
+}
+
+.profilePic {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.profilePic:hover {
+	filter: grayscale(60%);
+}

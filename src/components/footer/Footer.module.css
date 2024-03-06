@@ -1,0 +1,81 @@
+.container {
+	display: flex;
+	margin: 0px 300px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.myProfile {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	height: 50px;
+}
+
+.myProfile:hover {
+	background-color: #3a3b3c;
+}
+
+.profilep {
+	display: flex;
+	width: 35px;
+	height: 35px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5px;
+
+}
+
+.name {
+	margin-left: 10px;
+	color: #fff;
+	font-size: 15px;
+}
+
+.more {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: #242424;
+	border: none;
+}
+
+.more:hover {
+	background-color: #3a3b3c;
+}
+
+.border {
+	width: 100%;
+    border-bottom: 1px solid #3a3b3c;
+	margin: 5px 5px;
+}
+
+.shortCuts {
+	display: flex;
+    flex-direction: column;
+}
+
+.title {
+  margin-left: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+	margin-left: 10px;
+	color: #fff;
+	font-size: 13px;
+}
+
+.specialProfile {
+	border-radius: 20px;
+  }
+
