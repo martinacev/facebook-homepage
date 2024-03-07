@@ -1,81 +1,177 @@
 .container {
-    display: flex;
+	display: flex;
+	flex-direction: column;
 }
 
 .content {
-    display: flex;
-    margin-top: 10px;
+	display: flex;
+	margin-top: 10px;
 }
 
 .card {
-    display: flex;
-    border-radius: 20px;
-    margin: 5px;
-    flex-direction: column;
+	display: flex;
+	border-radius: 20px;
+	flex-direction: column;
+	margin: 0px 3px;
 }
 
 .profilePic {
-    display: flex;
-    width: 150px;
-    height: 200px;
-    border-radius: 20px;
+	display: flex;
+	width: 150px;
+	height: 200px;
+	border-radius: 20px;
 }
 
 .profilePic:hover {
-    transform: scale(1.1px);
-    animation: bounce 1s infinite;
+	transform: scale(1.1px);
+	animation: bounce 1s infinite;
 }
 
-.person{
-    background-image: url("../../../public/nothing.jpg");
+.person {
+	background-image: url("../../../public/nothing.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgb(236, 235, 235);
 	height: 200px;
 	width: 150px;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
-.personThird{
-    background-image: url("../../../public/lastjob.jpg");
+.personThird {
+	background-image: url("../../../public/lastjob.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgb(236, 235, 235);
 	height: 200px;
 	width: 150px;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
-.istoProgramiranje{
-    background-image: url("../../../public/itsektor.jpg");
+.istoProgramiranje {
+	background-image: url("../../../public/itsektor.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgb(236, 235, 235);
 	height: 200px;
 	width: 150px;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
-
-.profile{
-    background-image: url("../../../public/maci.jpg");
+.profile {
+	background-image: url("../../../public/maci.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgb(236, 235, 235);
 	height: 200px;
 	width: 150px;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
 .text {
-    display: flex;
-    margin-top: 180px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-left: 5px;
-    color: #fff;
+	display: flex;
+	margin-top: 180px;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 5px;
+	color: #fff;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #242526;
+	align-items: center;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.box {
+	display: flex;	
+	margin-right: 5px;
+}
+
+.image {
+	display: flex;
+	width: 35px;
+	height: 35px;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.input {
+	width: 100%;
+	display: flex;
+}
+.search {
+	display: flex;
+	align-items: center;
+	background-color: #3a3b3c;
+	width: 100%;
+	border-radius: 20px;
+	height: 35px;
+	border: none;
+	outline: none;
+}
+
+.search::placeholder {
+	font-size: 15px;
+	color: #acafb3;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.border {
+	border-bottom: 1px solid #3a3b3c;
+	width: 90%;
+}
+
+.compile {
+	display: flex;
+	width: 95%;
+	margin: 10px;
+}
+
+.components {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.holder {
+	margin: 5px 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 190px;
+	height: 40px;
+	border-radius: 10px;
+}
+
+.holder:hover {
+	background-color: #3a3b3c;
+}
+
+.emoji {
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+}
+
+.description {
+	margin-left: 5px;
+	font-size: 13px;
+	color: #acafb3;
+	font-weight: bold;
 }
