@@ -1,30 +1,24 @@
 import classes from "./Story.module.css";
 
 const Story = () => {
-	return (
-		<div className={classes.content}>
-			<div className={classes.card}>
-				<div className={classes.profile}>
-					<p className={classes.text}>Martin Acevski</p>
-				</div>
-			</div>
-			<div className={classes.card}>
-				<div className={classes.person}>
-					<p className={classes.text}>Mario Bozidarovski</p>
-				</div>
-			</div>
-			<div className={classes.card}>
-				<div className={classes.personThird}>
-					<p className={classes.text}>Creative Hub</p>
-				</div>
-			</div>
-			<div className={classes.card}>
-				<div className={classes.istoProgramiranje}>
-					<p className={classes.text}>Success</p>
-				</div>
-			</div>
-		</div>
-	);
+  const cardsData = [
+    { className: classes.profile, text: "Martin Acevski" },
+    { className: classes.person, text: "Mario Bozidarovski" },
+    { className: classes.personThird, text: "Creative Hub" },
+    { className: classes.istoProgramiranje, text: "Success" },
+  ];
+
+  return (
+    <div className={classes.content}>
+      {cardsData.map((card, index) => (
+        <div className={classes.card} key={index}>
+          <div className={card.className}>
+            <p className={classes.text}>{card.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Story;
