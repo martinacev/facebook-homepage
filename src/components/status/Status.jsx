@@ -2,9 +2,8 @@ import classes from "./Status.module.css";
 import mario from "/public/mark.jpg";
 import image from "/public/programin-learn.jpg";
 import share from "/public/share.png";
-import comment from '/public/comment.png';
-import like from '/public/like.png'
-
+import comment from "/public/comment.png";
+import like from "/public/like.png";
 
 const Status = () => {
 	return (
@@ -48,7 +47,8 @@ const Status = () => {
 						alt="learn-programing-post"
 					/>
 				</div>
-				
+
+				<div className={classes.border}></div>
 				<div className={classes.components}>
 					<div className={classes.holder}>
 						<img
@@ -76,6 +76,18 @@ const Status = () => {
 					</div>
 				</div>
 				<div className={classes.border}></div>
+				<div className={classes.group}>
+					<div className={classes.box}>
+						<img className={classes.avatar} src={mario} alt="profile" />
+					</div>
+					<div className={classes.input}>
+						<input
+							className={classes.search}
+							type="text"
+							placeholder="Write a comment..."
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

@@ -3,21 +3,22 @@
 	flex-direction: column;
 	background-color: #242526;
 	margin-top: 10px;
+	border-radius: 5px;
 }
 
 .status {
 	display: flex;
 	flex-direction: column;
-	border-radius: 5px;
 	width: 100%;
 }
 
 .wrapper {
 	display: flex;
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	margin-top: 10px;
 	align-items: center;
+	margin-bottom: 5px;
 }
 
 .profilePic {
@@ -48,6 +49,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 624px;
+	margin-bottom: 1px;
 }
 
 .dots {
@@ -158,5 +160,49 @@
 	color: #acafb3;
 	margin-left: 2px;
 	font-weight: bold;
+}
+
+.group {
+	display: flex;
+	width: 95%;
+	margin: 10px;
+}
+
+.box {
+	display: flex;	
+	margin-right: 5px;
+}
+
+.avatar {
+	display: flex;
+	width: 35px;
+	height: 35px;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.input {
+	width: 100%;
+	display: flex;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	background-color: #3a3b3c;
+	width: 100%;
+	border-radius: 20px;
+	height: 35px;
+	border: none;
+	outline: none;
+}
+
+.search::placeholder {
+	font-size: 15px;
+	color: #acafb3;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
 }
 
