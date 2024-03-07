@@ -1,5 +1,4 @@
 import classes from "./Main.module.css";
-
 import Story from "../story/Story";
 import Post from "../post/Post";
 import Status from "../status/Status";
