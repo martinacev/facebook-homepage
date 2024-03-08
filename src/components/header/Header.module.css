@@ -59,6 +59,7 @@
 
 .svgWrapper {
 	display: flex;
+	margin-right: 10px;
 }
 
 .box {
