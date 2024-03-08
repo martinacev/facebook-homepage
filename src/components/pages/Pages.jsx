@@ -25,6 +25,7 @@ const Pages = () => {
 					</div>
 				</div>
 			</div>
+			
 			<div className={classes.group}>
 				<div className={classes.wrapper}>
 					<img
