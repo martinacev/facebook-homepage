@@ -5,10 +5,12 @@ import Status from "../status/Status";
 
 const Main = () => {
 	return (
-		<div className={classes.container}>
-			<Story />
-			<Post />
-			<Status />
+		<div className={classes.mainContainer}>
+			<div className={classes.container}>
+				<Story />
+				<Post />
+				<Status />
+			</div>
 		</div>
 	);
 };

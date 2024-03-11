@@ -1,9 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	background-color: #242526;
 	margin-top: 10px;
-	border-radius: 5px;
 }
 
 .status {
@@ -11,6 +9,14 @@
 	flex-direction: column;
 	width: 100%;
 }
+
+.post {
+	display: flex;
+	margin-bottom: 15px;
+	background-color: #242526;
+	border-radius: 5px;
+}
+
 
 .wrapper {
 	display: flex;
@@ -204,5 +210,10 @@
 	display: flex;
 	align-items: center;
 	padding-left: 10px;
+}
+
+.photo {
+	height: 500px;
+	width: auto;
 }
 
