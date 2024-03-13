@@ -1,5 +1,6 @@
 import Birthdays from "../birthdays/Birthdays";
 import Contacts from "../contacts/Contacts";
+import Group from "../group/Group";
 import Pages from "../pages/Pages";
 import Promotions from "../promotions/Promotions";
 import classes from "./Active.module.css";
@@ -12,6 +13,7 @@ const Active = () => {
 				<Pages />
 				<Birthdays />
 				<Contacts />
+				<Group />
 			</div>
 		</div>
 	);

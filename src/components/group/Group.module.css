@@ -1,0 +1,41 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.title {
+	color: #acafb3;
+}
+
+.wrapper {
+	align-items: center;
+	width: 300px;
+}
+
+.group {
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	width: 100%;
+    cursor: pointer;
+}
+
+.group:hover {
+	background-color: #3a3b3c;
+}
+
+.pac {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+.name {
+	margin-left: 8px;
+	font-size: 13px;
+	font-weight: bold;
+}

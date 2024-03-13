@@ -7,7 +7,7 @@
   .wrapper {
 	flex-direction: column;
 	position: fixed;
-	max-height: 100vh;
+	max-height: 900px;
 	overflow-y: auto;
 	scrollbar-color: transparent transparent; 
 	transition: scrollbar-color 0.3s ease; 
