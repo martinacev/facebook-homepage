@@ -6,6 +6,12 @@
 	cursor: pointer;
 }
 
+.wrapper {
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
+}
+
 
  .group:hover {
 	background-color: #3a3b3c;

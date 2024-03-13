@@ -1,6 +1,6 @@
 import classes from "./Contacts.module.css";
 import Svg from "../componentsSvg/Svg";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const contactsData = [
 	{ image: "/public/mark.jpg", name: "Mario Bozidarovski" },
@@ -12,9 +12,11 @@ const contactsData = [
 
 const ContactItem = ({ image, name }) => (
 	<div className={classes.group}>
-		<img className={classes.pac} src={image} alt="image" />
-		<div className={classes.birthday}>
-			<p className={classes.name}>{name}</p>
+		<div className={classes.wrapper}>
+			<img className={classes.pac} src={image} alt="image" />
+			<div className={classes.birthday}>
+				<p className={classes.name}>{name}</p>
+			</div>
 		</div>
 	</div>
 );
@@ -34,6 +36,6 @@ const Contacts = () => {
 ContactItem.propTypes = {
 	image: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
-  };
+};
 
 export default Contacts;

@@ -1,6 +1,6 @@
 import classes from "./Group.module.css";
-import gang from '/public/gang.webp';
-import family from '/public/family.jpg';
+import gang from "/public/gang.webp";
+import family from "/public/family.jpg";
 
 const Group = () => {
 	return (
@@ -12,11 +12,7 @@ const Group = () => {
 
 				<div className={classes.wrapper}>
 					<div className={classes.group}>
-						<img
-							className={classes.pac}
-							src={gang}
-							alt="Friends"
-						/>
+						<img className={classes.pac} src={gang} alt="Friends" />
 						<p className={classes.name}>Friends</p>
 					</div>
 				</div>
