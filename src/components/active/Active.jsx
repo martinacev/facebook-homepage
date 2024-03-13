@@ -7,10 +7,12 @@ import classes from "./Active.module.css";
 const Active = () => {
 	return (
 		<div className={classes.container}>
-			<Promotions />
-			<Pages />
-			<Birthdays />
-			<Contacts />
+			<div className={classes.wrapper}>
+				<Promotions />
+				<Pages />
+				<Birthdays />
+				<Contacts />
+			</div>
 		</div>
 	);
 };
