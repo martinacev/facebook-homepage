@@ -6,6 +6,7 @@
 	width: 100%;
 	justify-content: space-between;
 	border-bottom: 1px solid #3a3b3c;
+	position: fixed;
 }
 
 .facebookLogo {

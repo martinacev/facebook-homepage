@@ -9,6 +9,7 @@
 	flex-direction: column;
 	margin-top: 15px;
 	height: 100vh;
+	position: fixed;
 }
 
 .myProfile {
