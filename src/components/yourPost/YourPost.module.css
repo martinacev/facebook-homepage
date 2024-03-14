@@ -1,0 +1,205 @@
+.container {
+	display: flex;
+	width: 100%;
+}
+
+.card {
+	background-color: #242526;
+	width: 450px;
+	border-radius: 10px;
+	border: 1px solid #3a3b3c;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 50px;
+	justify-content: end;
+}
+
+.combine {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 130px;
+	margin-right: 20px;
+}
+
+.delete {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	height: 35px;
+	width: 35px;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: gray;
+	background-color: #3a3b3c;
+	cursor: pointer;
+}
+
+.border {
+	margin-top: 10px;
+	border-bottom: 1px solid #3a3b3c;
+	width: 100%;
+}
+
+.public {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.profilePic {
+	width: 35px;
+	height: 35px;
+	border-radius: 20px;
+	margin-left: 10px;
+}
+
+.information {
+	flex-direction: column;
+	line-height: 1.1px;
+	margin-left: 5px;
+	display: flex;
+	width: 100%;
+}
+
+.name {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.key {
+	margin-right: 5px;
+}
+
+.time {
+	display: flex;
+	width: max-content;
+	padding: 0 10px;
+	font-size: 12px;
+	color: #b0b3b8;
+	align-items: center;
+	background-color: #3a3b3c;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.text {
+	color: #c3c3c3;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.box {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	background-color: #242526;
+	border: none;
+	outline: none;
+	color: white;
+	height: 100px;
+	margin-left: 10px;
+	font-size: 20px;
+	width: 100%;
+	word-wrap: break-word;
+	resize: none;
+}
+
+.field::placeholder {
+	font-size: 20px;
+}
+
+.addPost {
+	margin: 10px;
+	padding: 0 10px;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+	border: 1px solid #3a3b3c;
+	border-radius: 5px;
+	height: 50px;
+}
+
+.post {
+	display: flex;
+}
+
+.txt {
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.emoji {
+	display: flex;
+}
+
+.bg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+.bg:hover {
+	background-color: #3a3b3c;
+}
+
+.btn {
+	display: flex;
+}
+
+.push {
+	display: flex;
+	width: 100%;
+	height: 40px;
+	background-color: #3a3b3c;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+    color: grey;
+	font-weight: bold;
+	cursor: pointer;
+}

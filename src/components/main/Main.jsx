@@ -2,6 +2,7 @@ import classes from "./Main.module.css";
 import Story from "../story/Story";
 import Post from "../post/Post";
 import Status from "../status/Status";
+import YourPost from "../yourPost/YourPost";
 
 const Main = () => {
 	return (
@@ -10,6 +11,7 @@ const Main = () => {
 				<Story />
 				<Post />
 				<Status />
+				<YourPost />
 			</div>
 		</div>
 	);

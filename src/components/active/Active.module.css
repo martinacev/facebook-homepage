@@ -9,6 +9,7 @@
 	position: fixed;
 	max-height: 900px;
 	overflow-y: auto;
+	scrollbar-width: thin; 
 	scrollbar-color: transparent transparent; 
 	transition: scrollbar-color 0.3s ease; 
   }
@@ -19,7 +20,6 @@
   
   .wrapper:hover {
 	scrollbar-color: #3a3b3c transparent; 
-	scrollbar-width: thin; 
   }
   
   .wrapper:hover::-webkit-scrollbar {

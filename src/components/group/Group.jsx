@@ -10,7 +10,7 @@ const Group = () => {
 					<p className={classes.title}>Group conversations</p>
 				</div>
 
-				<div className={classes.wrapper}>
+				<div     className={classes.wrapper}>
 					<div className={classes.group}>
 						<img className={classes.pac} src={gang} alt="Friends" />
 						<p className={classes.name}>Friends</p>

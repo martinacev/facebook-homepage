@@ -32,7 +32,6 @@
 	align-items: center;
 	justify-content: center;
 	margin-left: 5px;
-
 }
 
 .name {
@@ -45,10 +44,9 @@
 .more {
 	display: flex;
 	align-items: center;
-	width: 300px;
 	height: 40px;
 	border-radius: 5px;
-	 background-color: #18191a;
+	background-color: #18191a;
 	border: none;
 }
 
@@ -58,20 +56,20 @@
 
 .border {
 	width: 100%;
-    border-bottom: 1px solid #3a3b3c;
+	border-bottom: 1px solid #3a3b3c;
 	margin: 5px 5px;
 }
 
 .shortCuts {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .title {
-  margin-left: 10px;
-  height: 10px;
-  display: flex;
-  align-items: center;
+	margin-left: 10px;
+	height: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .text {
@@ -82,5 +80,4 @@
 
 .specialProfile {
 	border-radius: 20px;
-  }
-
+}
