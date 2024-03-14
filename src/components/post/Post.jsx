@@ -3,8 +3,9 @@ import pp from "/public/maci.jpg";
 import call from "/public/call.png";
 import photo from "/public/photo.png";
 import smile from "/public/smile.png";
+import PropTypes from 'prop-types';
 
-const Post = () => {
+const Post = ({ onInputClick }) => {
 	return (
 		<div className={classes.post}>
 			<div className={classes.compile}>
@@ -16,8 +17,8 @@ const Post = () => {
 						className={classes.search}
 						type="text"
 						placeholder="What's on your mind, Martin?"
+						onClick={onInputClick}
 					/>
-					
 				</div>
 			</div>
 			<div className={classes.border}></div>
@@ -41,6 +42,10 @@ const Post = () => {
 			</div>
 		</div>
 	);
+};
+
+Post.propTypes = {
+    onInputClick: PropTypes.func.isRequired
 };
 
 export default Post;
