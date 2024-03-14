@@ -12,6 +12,7 @@
 .facebookLogo {
 	display: flex;
 	margin-left: 5px;
+	cursor: pointer;
 }
 
 .searchFb {

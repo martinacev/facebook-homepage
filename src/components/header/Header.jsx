@@ -3,10 +3,15 @@ import fb from "/facebook.png";
 import pp from '/public/maci.jpg';
 
 const Header = () => {
+
+	const handleFacebookClick = () => {
+		window.location.reload();
+	}
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.wrap}>
-				<div className={classes.facebookLogo}>
+				<div onClick={handleFacebookClick} className={classes.facebookLogo}>
 					<img className={classes.logo} src={fb} alt="facebooklogo" />
 				</div>
 				<div className={classes.searchFb}>
