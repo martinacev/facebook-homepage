@@ -15,7 +15,6 @@ const Main = () => {
 				<Status />
 				{popUp && <YourPost onClose={() => setPopUp(false)} />}
 			</div>
-			{popUp && <div className={classes.backdrop}></div>}
 		</div>
 	);
 };
