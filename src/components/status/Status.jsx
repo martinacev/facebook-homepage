@@ -1,3 +1,4 @@
+import  { useState } from "react";
 import classes from "./Status.module.css";
 import mario from "/public/mark.jpg";
 import image from "/public/programin-learn.jpg";
@@ -5,9 +6,29 @@ import share from "/public/share.png";
 import pac from "/public/2pac.jpg";
 import legend from "/public/legend.jpg";
 import comment from "/public/comment.png";
+import lajkce from "/public/lajkce.png";
 import like from "/public/like.png";
 
 const Status = () => {
+	const [likeCounts, setLikeCounts] = useState({
+		post1: { count: 0, liked: false },
+		post2: { count: 0, liked: false },
+	});
+
+	const toggleLike = (postId) => {
+		setLikeCounts((prevState) => ({
+			...prevState,
+			[postId]: {
+				count: prevState[postId].liked
+					? prevState[postId].count - 1
+					: prevState[postId].count + 1,
+				liked: !prevState[postId].liked,
+			},
+			[postId === "post1" ? "post2" : "post1"]:
+				prevState[postId === "post1" ? "post2" : "post1"],
+		}));
+	};
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.post}>
@@ -22,7 +43,6 @@ const Status = () => {
 							<p className={classes.name}>Mario Bozidarovski</p>
 							<p className={classes.time}>38m</p>
 						</div>
-
 						<div className={classes.dots}>
 							<div className={classes.background}>
 								<svg
@@ -36,13 +56,11 @@ const Status = () => {
 									</g>
 								</svg>
 							</div>
-
 							<div className={classes.cross}>
 								<p className={classes.simbol}>✕</p>
 							</div>
 						</div>
 					</div>
-
 					<div className={classes.image}>
 						<img
 							className={classes.photo}
@@ -50,16 +68,28 @@ const Status = () => {
 							alt="learn-programing-post"
 						/>
 					</div>
-
 					<div className={classes.border}></div>
+					<div className={classes.yourLike}>
+						<img
+							className={classes.finger}
+							src={lajkce}
+							alt="like"
+						/>
+						<span>{likeCounts.post1.count}</span>
+					</div>
 					<div className={classes.components}>
-						<div className={classes.holder}>
+						<div
+							onClick={() => toggleLike("post1")}
+							className={classes.holder}
+						>
 							<img
 								className={classes.emoji}
 								src={like}
 								alt="video call"
 							/>
-							<p className={classes.description}>Like</p>
+							<p className={classes.description}>
+								{likeCounts.post1.liked ? "Unlike" : "Like"}
+							</p>
 						</div>
 						<div className={classes.holder}>
 							<img
@@ -97,7 +127,6 @@ const Status = () => {
 					</div>
 				</div>
 			</div>
-
 			<div className={classes.post}>
 				<div className={classes.status}>
 					<div className={classes.wrapper}>
@@ -110,7 +139,6 @@ const Status = () => {
 							<p className={classes.name}>Sergej Pohahontas</p>
 							<p className={classes.time}>38m</p>
 						</div>
-
 						<div className={classes.dots}>
 							<div className={classes.background}>
 								<svg
@@ -124,13 +152,11 @@ const Status = () => {
 									</g>
 								</svg>
 							</div>
-
 							<div className={classes.cross}>
 								<p className={classes.simbol}>✕</p>
 							</div>
 						</div>
 					</div>
-
 					<div className={classes.image}>
 						<img
 							className={classes.photo}
@@ -138,16 +164,28 @@ const Status = () => {
 							alt="learn-programing-post"
 						/>
 					</div>
-
 					<div className={classes.border}></div>
+					<div className={classes.yourLike}>
+						<img
+							className={classes.finger}
+							src={lajkce}
+							alt="like"
+						/>
+						<span>{likeCounts.post2.count}</span>
+					</div>
 					<div className={classes.components}>
-						<div className={classes.holder}>
+						<div
+							onClick={() => toggleLike("post2")}
+							className={classes.holder}
+						>
 							<img
 								className={classes.emoji}
 								src={like}
 								alt="video call"
 							/>
-							<p className={classes.description}>Like</p>
+							<p className={classes.description}>
+								{likeCounts.post2.liked ? "Unlike" : "Like"}
+							</p>
 						</div>
 						<div className={classes.holder}>
 							<img
