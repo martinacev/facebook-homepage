@@ -1,0 +1,63 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	justify-content: space-between;
+    height: 40px;
+	margin-bottom: 5px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-left: 15px;
+}
+
+.options {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	margin-right: 10px;
+}
+
+.border {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 20px;
+}
+
+.border:hover {
+    background-color: #3a3b3c;
+}
+
+.size {
+	width: 15px;
+	height: 15px;
+}
+
+.searchFb {
+	display: flex;
+	margin-left: 5px;
+}
+
+.search {
+	border-radius: 20px;
+	background-color: #3a3b3c;
+	border: none;
+	width: 200px;
+	height: 35px;
+	padding-left: 20px;
+	outline: none;
+}

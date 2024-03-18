@@ -4,6 +4,7 @@ import Post from "../post/Post";
 import Status from "../status/Status";
 import YourPost from "../yourPost/YourPost";
 import { useState } from "react";
+import Chat from "../chat/Chat";
 
 const Main = () => {
 	const [popUp, setPopUp] = useState(false);
@@ -14,6 +15,7 @@ const Main = () => {
 				<Post onInputClick={() => setPopUp(true)} />
 				<Status />
 				{popUp && <YourPost onClose={() => setPopUp(false)} />}
+				<Chat />
 			</div>
 		</div>
 	);

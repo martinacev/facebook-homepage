@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.chat {
+	display: flex;
+	background-color: #242526;
+	flex-direction: column;
+	width: 300px;
+	border-radius: 10px;
+}
+
