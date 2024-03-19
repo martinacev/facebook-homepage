@@ -8,6 +8,7 @@ import Chat from "../chat/Chat";
 
 const Main = () => {
 	const [popUp, setPopUp] = useState(false);
+	
 	return (
 		<div className={classes.mainContainer}>
 			<div className={classes.container}>

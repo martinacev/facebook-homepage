@@ -1,5 +1,6 @@
 .container {
 	display: flex;
+	flex-direction: column;
 }
 
 .chat {
@@ -12,24 +13,66 @@
 }
 
 .inbox {
-    display: flex;
+	display: flex;
 }
 
 .components {
 	display: flex;
 	border: none;
 	outline: none;
-    color: white;
-    font-size: 13px;
-    background-color: transparent;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
+	color: white;
+	font-size: 13px;
+	background-color: transparent;
+	height: 30px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 .components:hover {
+	background-color: #3a3b3c;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+}
+
+.friends {
+	display: flex;
+	align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.friends:hover {
     background-color: #3a3b3c;
 }
+
+.image {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+    margin-left: 10px;
+}
+
+.name {
+	margin-left: 10px;
+	line-height: 1px;
+}
+
+.what {
+	font-size: 13px;
+	color: #acafb3;
+    padding-bottom: 5px;
+}
+
+.name h5 {
+    margin-bottom: 15px; 
+  }
+  
+  .name .what {
+    margin-top: 0;
+  }
