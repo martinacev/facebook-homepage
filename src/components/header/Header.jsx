@@ -1,17 +1,24 @@
 import classes from "./Header.module.css";
 import fb from "/facebook.png";
-import pp from '/public/maci.jpg';
+import pp from "/public/maci.jpg";
+import PropTypes from 'prop-types';
 
-const Header = () => {
-
+const Header = ({ toggleChatVisibility }) => {
 	const handleFacebookClick = () => {
 		window.location.reload();
-	}
+	};
+
+	const handleChatClick = () => {
+		toggleChatVisibility();
+	};
 
 	return (
 		<div className={classes.container}>
 			<div className={classes.wrap}>
-				<div onClick={handleFacebookClick} className={classes.facebookLogo}>
+				<div
+					onClick={handleFacebookClick}
+					className={classes.facebookLogo}
+				>
 					<img className={classes.logo} src={fb} alt="facebooklogo" />
 				</div>
 				<div className={classes.searchFb}>
@@ -24,7 +31,7 @@ const Header = () => {
 			</div>
 			<div className={classes.tools}>
 				<div className={classes.components}>
-					<svg 
+					<svg
 						viewBox="0 0 24 24"
 						width="24"
 						height="24"
@@ -79,7 +86,7 @@ const Header = () => {
 						<path d="M12 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm8 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm8 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm8 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm8 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 17a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
 					</svg>
 				</div>
-				<div className={classes.box}>
+				<div onClick={handleChatClick} className={classes.box}>
 					<svg
 						viewBox="0 0 12 13"
 						width="20"
@@ -102,11 +109,19 @@ const Header = () => {
 					</svg>
 				</div>
 				<div className={classes.box}>
-                  <img className={classes.profilePic} src={pp} alt="profile pic" />
+					<img
+						className={classes.profilePic}
+						src={pp}
+						alt="profile pic"
+					/>
 				</div>
 			</div>
 		</div>
 	);
 };
+
+Header.propTypes = {
+	toggleChatVisibility: PropTypes.func.isRequired,
+}
 
 export default Header;
