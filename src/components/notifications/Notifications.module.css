@@ -1,0 +1,73 @@
+.container {
+	display: flex;
+}
+
+.notifications {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #242526;
+    border-radius: 10px;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 300px;
+	padding: 0 15px;
+    height: 50px;
+}
+
+
+.border {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 20px;
+}
+
+.border:hover {
+	background-color: #3a3b3c;
+}
+
+.size {
+	width: 15px;
+	height: 15px;
+}
+
+.read {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.inbox {
+	display: flex;
+}
+
+.components {
+	display: flex;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 13px;
+	background-color: transparent;
+	height: 30px;
+	align-items: center;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
+    justify-content: start;
+}
+
+.components:hover {
+	background-color: #3a3b3c;
+}
+

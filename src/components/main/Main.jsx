@@ -5,7 +5,8 @@ import Status from "../status/Status";
 import YourPost from "../yourPost/YourPost";
 import { useState } from "react";
 import Chat from "../chat/Chat";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import Notifications from "../notifications/Notifications";
 
 const Main = ({ isChatVisible }) => {
 	const [popUp, setPopUp] = useState(false);
@@ -17,7 +18,8 @@ const Main = ({ isChatVisible }) => {
 				<Post onInputClick={() => setPopUp(true)} />
 				<Status />
 				{popUp && <YourPost onClose={() => setPopUp(false)} />}
-				{!isChatVisible && <Chat />}
+				{isChatVisible && <Chat />}
+				<Notifications />
 			</div>
 		</div>
 	);
@@ -25,6 +27,6 @@ const Main = ({ isChatVisible }) => {
 
 Main.propTypes = {
 	isChatVisible: PropTypes.bool.isRequired,
-}
+};
 
 export default Main;
