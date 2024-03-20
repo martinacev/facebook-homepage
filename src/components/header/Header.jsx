@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 const Header = ({ toggleChatVisibility, toggleNotificationsVisibility }) => {
 	const [isChatOpen, setIsChatOpen] = useState(false);
+	const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
 
 	const handleFacebookClick = () => {
 		window.location.reload();
@@ -14,10 +15,15 @@ const Header = ({ toggleChatVisibility, toggleNotificationsVisibility }) => {
 	const handleChatClick = () => {
 		toggleChatVisibility();
 		setIsChatOpen(!isChatOpen);
+		if (isNotificationsOpen) {
+			toggleNotificationsVisibility();
+			setIsNotificationsOpen(false);
+		}
 	};
 
 	const handleNotificationsClick = () => {
 		toggleNotificationsVisibility();
+		setIsNotificationsOpen(!isNotificationsOpen);
 		if (isChatOpen) {
 			toggleChatVisibility();
 			setIsChatOpen(false);
