@@ -5,7 +5,6 @@ const Notifications = () => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.notifications}>
-
 				<div className={classes.wrapper}>
 					<div className={classes.title}>
 						<h2>Notifications</h2>
@@ -21,15 +20,22 @@ const Notifications = () => {
 					</div>
 
 					<div className={classes.inbox}>
-						<button className={classes.components}>
-							Unread
-						</button>
+						<button className={classes.components}>Unread</button>
 					</div>
 				</div>
 
-                <div>
-                    
-                </div>
+				<div className={classes.sortAllNotifications}>
+					<div className={classes.notificationsWrap}>
+						<div className={classes.earlier}>
+							<h4>Earlier</h4>
+						</div>
+						<div className={classes.all}>
+							<button className={classes.components}>
+								see all
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

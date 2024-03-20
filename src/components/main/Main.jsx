@@ -8,7 +8,7 @@ import Chat from "../chat/Chat";
 import PropTypes from "prop-types";
 import Notifications from "../notifications/Notifications";
 
-const Main = ({ isChatVisible }) => {
+const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [popUp, setPopUp] = useState(false);
 
 	return (
@@ -19,7 +19,7 @@ const Main = ({ isChatVisible }) => {
 				<Status />
 				{popUp && <YourPost onClose={() => setPopUp(false)} />}
 				{isChatVisible && <Chat />}
-				<Notifications />
+				{isNotificationsVisible && <Notifications />}
 			</div>
 		</div>
 	);
@@ -27,6 +27,7 @@ const Main = ({ isChatVisible }) => {
 
 Main.propTypes = {
 	isChatVisible: PropTypes.bool.isRequired,
+	isNotificationsVisible: PropTypes.bool.isRequired,
 };
 
 export default Main;

@@ -1,15 +1,27 @@
+import { useState } from "react";
 import classes from "./Header.module.css";
 import fb from "/facebook.png";
 import pp from "/public/maci.jpg";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const Header = ({ toggleChatVisibility }) => {
+const Header = ({ toggleChatVisibility, toggleNotificationsVisibility }) => {
+	const [isChatOpen, setIsChatOpen] = useState(false);
+
 	const handleFacebookClick = () => {
 		window.location.reload();
 	};
 
 	const handleChatClick = () => {
 		toggleChatVisibility();
+		setIsChatOpen(!isChatOpen);
+	};
+
+	const handleNotificationsClick = () => {
+		toggleNotificationsVisibility();
+		if (isChatOpen) {
+			toggleChatVisibility();
+			setIsChatOpen(false);
+		}
 	};
 
 	return (
@@ -98,7 +110,7 @@ const Header = ({ toggleChatVisibility }) => {
 						</g>
 					</svg>
 				</div>
-				<div className={classes.box}>
+				<div onClick={handleNotificationsClick} className={classes.box}>
 					<svg
 						viewBox="0 0 24 24"
 						width="20"
@@ -122,6 +134,7 @@ const Header = ({ toggleChatVisibility }) => {
 
 Header.propTypes = {
 	toggleChatVisibility: PropTypes.func.isRequired,
-}
+	toggleNotificationsVisibility: PropTypes.func.isRequired,
+};
 
 export default Header;
