@@ -7,6 +7,7 @@ import { useState } from "react";
 import Chat from "../chat/Chat";
 import PropTypes from "prop-types";
 import Notifications from "../notifications/Notifications";
+import AddStatus from "../addStatus/AddStatus";
 
 const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [popUp, setPopUp] = useState(false);
@@ -16,6 +17,7 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 			<div className={classes.container}>
 				<Story />
 				<Post onInputClick={() => setPopUp(true)} />
+				<AddStatus />
 				<Status />
 				{popUp && <YourPost onClose={() => setPopUp(false)} />}
 				{isChatVisible && <Chat />}
