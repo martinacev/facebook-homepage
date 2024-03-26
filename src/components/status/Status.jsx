@@ -7,6 +7,7 @@ import pac from "/public/2pac.jpg";
 import legend from "/public/legend.jpg";
 import comment from "/public/comment.png";
 import lajkce from "/public/lajkce.png";
+import maci from "/public/maci.jpg";
 import like from "/public/like.png";
 
 const Status = () => {
@@ -113,7 +114,7 @@ const Status = () => {
 						<div className={classes.box}>
 							<img
 								className={classes.avatar}
-								src={mario}
+								src={maci}
 								alt="profile"
 							/>
 						</div>
@@ -209,7 +210,7 @@ const Status = () => {
 						<div className={classes.box}>
 							<img
 								className={classes.avatar}
-								src={mario}
+								src={maci}
 								alt="profile"
 							/>
 						</div>

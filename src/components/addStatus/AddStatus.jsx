@@ -95,6 +95,22 @@ const AddStatus = () => {
 					</div>
 				</div>
 				<div className={classes.border}></div>
+				<div className={classes.group}>
+						<div className={classes.box}>
+							<img
+								className={classes.avatar}
+								src={maci}
+								alt="profile"
+							/>
+						</div>
+						<div className={classes.input}>
+							<input
+								className={classes.search}
+								type="text"
+								placeholder="Write a comment..."
+							/>
+						</div>
+					</div>
 			</div>
 		</div>
 	);
