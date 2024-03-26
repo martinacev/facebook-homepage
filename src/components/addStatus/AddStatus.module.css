@@ -109,6 +109,19 @@
 	width: 100%;
 }
 
+.yourLike {
+	display: flex;
+	width: 100%;
+	height: 30px;
+	align-items: center;
+}
+
+.finger {
+	width: 50px;
+	margin-left: 20px;
+}
+
+
 .components {
 	display: flex;
 	flex-direction: row;

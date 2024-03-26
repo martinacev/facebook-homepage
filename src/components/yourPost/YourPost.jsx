@@ -9,12 +9,12 @@ import TRI from "/TRI.png";
 import PropTypes from 'prop-types'; 
 
 const YourPost = ({ onClose }) => { 
+    
     return (
         <div className={classes.container}>
             <div className={classes.card}>
                 <div className={classes.header}>
                     <div className={classes.combine}>
-                        <div className={classes.title}>Create Post</div>
                         <div className={classes.remove}>
                             <button className={classes.delete} onClick={onClose}>✖</button>
                         </div>

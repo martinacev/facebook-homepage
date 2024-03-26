@@ -3,8 +3,29 @@ import maci from "/public/maci.jpg";
 import like from "/public/like.png";
 import comment from "/public/comment.png";
 import share from "/public/share.png";
+import lajkce from "/public/lajkce.png";
+import { useState } from "react";
 
 const AddStatus = () => {
+	const [likeCounts, setLikeCounts] = useState({
+		post1: { count: 0, liked: false },
+	
+	});
+
+	const toggleLike = (postId) => {
+		setLikeCounts((prevState) => ({
+			...prevState,
+			[postId]: {
+				count: prevState[postId].liked
+					? prevState[postId].count - 1
+					: prevState[postId].count + 1,
+				liked: !prevState[postId].liked,
+			},
+			[postId === "post1" ? "post2" : "post1"]:
+				prevState[postId === "post1" ? "post2" : "post1"],
+		}));
+	};
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.addStatus}>
@@ -39,9 +60,16 @@ const AddStatus = () => {
 				<div className={classes.yourPost}>
 					<span className={classes.field}></span>
 				</div>
+				<div className={classes.yourLike}>
+					<img className={classes.finger} src={lajkce} alt="like" />
+					<span>{likeCounts.post1.count}</span>
+				</div>
 				<div className={classes.border}></div>
 				<div className={classes.components}>
-					<div className={classes.holder}>
+					<div
+						onClick={() => toggleLike("post1")}
+						className={classes.holder}
+					>
 						<img
 							className={classes.emoji}
 							src={like}
