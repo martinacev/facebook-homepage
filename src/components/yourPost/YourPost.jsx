@@ -9,7 +9,7 @@ import TRI from "/TRI.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const YourPost = ({ onClose, onContentChange, onPost }) => {
+const YourPost = ({ onClose, onContentChange}) => {
 	const [localContent, setLocalContent] = useState("");
 
 	return (
@@ -112,7 +112,7 @@ const YourPost = ({ onClose, onContentChange, onPost }) => {
 						<button
 							onClick={() => {
 								onContentChange(localContent); 
-								onPost(); 
+								setLocalContent(""); 
 							}}
 							className={classes.push}
 						>

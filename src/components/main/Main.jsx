@@ -11,14 +11,10 @@ import AddStatus from "../addStatus/AddStatus";
 
 const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [popUp, setPopUp] = useState(false);
-	const [postContent, setPostContent] = useState("");
-	const [isAddStatusVisible, setIsAddStatusVisible] = useState(false);
+	const [posts, setPosts] = useState([]);
 
 	const handlePostContentChange = (content) => {
-		setPostContent(content);
-	};
-
-	const hideYourPost = () => {
+		setPosts([...posts, content]);
 		setPopUp(false);
 	};
 
@@ -27,16 +23,16 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 			<div className={classes.container}>
 				<Story />
 				<Post onInputClick={() => setPopUp(true)} />
-				{isAddStatusVisible && <AddStatus postContent={postContent} />}
+				{posts
+					.map((content, index) => (
+						<AddStatus key={index} postContent={content} />
+					))
+					.reverse()}
 				<Status />
 				{popUp && (
 					<YourPost
 						onClose={() => setPopUp(false)}
 						onContentChange={handlePostContentChange}
-						onPost={() => {
-							setIsAddStatusVisible(true);
-							hideYourPost();
-						}}
 					/>
 				)}
 				{isChatVisible && <Chat />}
