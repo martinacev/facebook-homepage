@@ -7,7 +7,7 @@ const MenuItem = ({ icon, text }) => (
 	<div className={classes.myProfile}>
 		<img
 			className={`${classes.profilep} ${
-				text === "Martin Acevski" ? classes.specialProfile : ""
+				text === "Your Profile" ? classes.specialProfile : ""
 			}`}
 			src={icon}
 			alt={text}
@@ -23,7 +23,7 @@ MenuItem.propTypes = {
 
 const Footer = () => {
 	const menuItems = [
-		{ icon: "/maci.jpg", text: "Martin Acevski" },
+		{ icon: "/maci.jpg", text: "Your Profile" },
 		{ icon: "/friends.png", text: "Friends" },
 		{ icon: "/memories.png", text: "Memories" },
 		{ icon: "/saved.png", text: "Saved" },

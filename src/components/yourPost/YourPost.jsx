@@ -37,7 +37,7 @@ const YourPost = ({ onClose, onContentChange}) => {
 							alt="profile"
 						/>
 						<div className={classes.information}>
-							<p className={classes.name}>Martin Acevski</p>
+							<p className={classes.name}>Your Profile</p>
 							<div className={classes.time}>
 								<img
 									className={classes.key}

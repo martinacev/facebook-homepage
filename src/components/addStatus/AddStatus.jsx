@@ -36,7 +36,7 @@ const AddStatus = ({ postContent }) => {
 						alt="profile"
 					/>
 					<div className={classes.information}>
-						<p className={classes.name}>Martin Acevski</p>
+						<p className={classes.name}>Your Profile</p>
 						<p className={classes.time}>Just now</p>
 					</div>
 					<div className={classes.dots}>

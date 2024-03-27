@@ -2,7 +2,7 @@ import classes from "./Story.module.css";
 
 const Story = () => {
   const cardsData = [
-    { className: classes.profile, text: "Martin Acevski" },
+    { className: classes.profile, text: "Your Profile" },
     { className: classes.person, text: "Mario Bozidarovski" },
     { className: classes.personThird, text: "Creative Hub" },
     { className: classes.istoProgramiranje, text: "Success" },
