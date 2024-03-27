@@ -5,11 +5,11 @@ import comment from "/public/comment.png";
 import share from "/public/share.png";
 import lajkce from "/public/lajkce.png";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-const AddStatus = () => {
+const AddStatus = ({ postContent }) => {
 	const [likeCounts, setLikeCounts] = useState({
 		post1: { count: 0, liked: false },
-	
 	});
 
 	const toggleLike = (postId) => {
@@ -58,7 +58,7 @@ const AddStatus = () => {
 					</div>
 				</div>
 				<div className={classes.yourPost}>
-					<span className={classes.field}></span>
+					<span className={classes.field}>{postContent}</span>
 				</div>
 				<div className={classes.yourLike}>
 					<img className={classes.finger} src={lajkce} alt="like" />
@@ -96,24 +96,28 @@ const AddStatus = () => {
 				</div>
 				<div className={classes.border}></div>
 				<div className={classes.group}>
-						<div className={classes.box}>
-							<img
-								className={classes.avatar}
-								src={maci}
-								alt="profile"
-							/>
-						</div>
-						<div className={classes.input}>
-							<input
-								className={classes.search}
-								type="text"
-								placeholder="Write a comment..."
-							/>
-						</div>
+					<div className={classes.box}>
+						<img
+							className={classes.avatar}
+							src={maci}
+							alt="profile"
+						/>
 					</div>
+					<div className={classes.input}>
+						<input
+							className={classes.search}
+							type="text"
+							placeholder="Write a comment..."
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
+};
+
+AddStatus.propTypes = {
+	postContent: PropTypes.string.isRequired,
 };
 
 export default AddStatus;
