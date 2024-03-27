@@ -12,9 +12,14 @@ import AddStatus from "../addStatus/AddStatus";
 const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [popUp, setPopUp] = useState(false);
 	const [postContent, setPostContent] = useState("");
+	const [isAddStatusVisible, setIsAddStatusVisible] = useState(false);
 
 	const handlePostContentChange = (content) => {
 		setPostContent(content);
+	};
+
+	const hideYourPost = () => {
+		setPopUp(false);
 	};
 
 	return (
@@ -22,14 +27,15 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 			<div className={classes.container}>
 				<Story />
 				<Post onInputClick={() => setPopUp(true)} />
-				<AddStatus postContent={postContent} />
+				{isAddStatusVisible && <AddStatus postContent={postContent} />}
 				<Status />
 				{popUp && (
 					<YourPost
 						onClose={() => setPopUp(false)}
 						onContentChange={handlePostContentChange}
 						onPost={() => {
-							setPopUp(false); 
+							setIsAddStatusVisible(true);
+							hideYourPost();
 						}}
 					/>
 				)}

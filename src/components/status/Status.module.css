@@ -93,7 +93,9 @@
 	display: flex;
 	align-items: center;
 	width: 30px;
+    justify-content: center;
 	height: 30px;
+	border-radius: 20px;
 }
 
 .cross {
@@ -101,6 +103,7 @@
 	align-items: center;
 	width: 30px;
 	height: 20px;
+	
 }
 
 
