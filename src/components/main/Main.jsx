@@ -14,8 +14,14 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [posts, setPosts] = useState([]);
 
 	const handlePostContentChange = (content) => {
-		setPosts([...posts, content]);
+		const id = Date.now().toString();
+		setPosts([...posts, { id, content }]);
 		setPopUp(false);
+	};
+
+	const handleRemovePost = (content) => {
+		const updatedPosts = posts.filter((post) => post.id !== content);
+		setPosts(updatedPosts);
 	};
 
 	return (
@@ -23,11 +29,14 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 			<div className={classes.container}>
 				<Story />
 				<Post onInputClick={() => setPopUp(true)} />
-				{posts
-					.map((content, index) => (
-						<AddStatus key={index} postContent={content} />
-					))
-					.reverse()}
+				{posts.map((post) => (
+					<AddStatus
+						key={post.id}
+						postId={post.id}
+						postContent={post.content}
+						onRemove={handleRemovePost} 
+					/>
+				)).reverse()}
 				<Status />
 				{popUp && (
 					<YourPost

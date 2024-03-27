@@ -7,7 +7,7 @@ import lajkce from "/public/lajkce.png";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const AddStatus = ({ postContent }) => {
+const AddStatus = ({ postContent, postId, onRemove }) => {
 	const [likeCounts, setLikeCounts] = useState({
 		post1: { count: 0, liked: false },
 	});
@@ -52,7 +52,10 @@ const AddStatus = ({ postContent }) => {
 								</g>
 							</svg>
 						</div>
-						<div className={classes.cross}>
+						<div
+							className={classes.cross}
+							onClick={() => onRemove(postId)}
+						>
 							<p className={classes.simbol}>✕</p>
 						</div>
 					</div>
@@ -118,6 +121,8 @@ const AddStatus = ({ postContent }) => {
 
 AddStatus.propTypes = {
 	postContent: PropTypes.string.isRequired,
+	postId: PropTypes.string.isRequired,
+	onRemove: PropTypes.func.isRequired,
 };
 
 export default AddStatus;
