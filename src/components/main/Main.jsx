@@ -29,14 +29,16 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 			<div className={classes.container}>
 				<Story />
 				<Post onInputClick={() => setPopUp(true)} />
-				{posts.map((post) => (
-					<AddStatus
-						key={post.id}
-						postId={post.id}
-						postContent={post.content}
-						onRemove={handleRemovePost} 
-					/>
-				)).reverse()}
+				{posts
+					.map((post) => (
+						<AddStatus
+							key={post.id}
+							postId={post.id}
+							postContent={post.content}
+							onRemove={handleRemovePost}
+						/>
+					))
+					.reverse()}
 				<Status />
 				{popUp && (
 					<YourPost
