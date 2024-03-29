@@ -267,6 +267,7 @@
 	align-items: center;
 	justify-content: start;
 	margin: 0;
+	flex-direction: column;
 }
 
 .yourComments {
@@ -288,9 +289,37 @@
 }
 
 .wrapContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	width: fit-content;
+	height: auto;
 	max-width: 600px;
 	background-color: #3a3b3c;
 	padding: 5px 10px;
 	border-radius: 20px;
+      line-height: 2px;
+}
+
+.profile {
+	line-height: 3px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.text {
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+.reacts {
+	display: flex;
+}
+
+.reply {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 60px;
+	line-height: 0.1px;
 }

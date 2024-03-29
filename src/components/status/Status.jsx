@@ -136,6 +136,9 @@ const Status = () => {
 								</div>
 								<div className={classes.yourComments}>
 									<div className={classes.wrapContent}>
+										<p className={classes.profile}>
+											Martin Acevski
+										</p>
 										<span className={classes.text}>
 											{comment}
 										</span>
