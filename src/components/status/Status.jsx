@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import classes from "./Status.module.css";
 import mario from "/public/mark.jpg";
 import image from "/public/programin-learn.jpg";
@@ -16,6 +16,8 @@ const Status = () => {
 		post2: { count: 0, liked: false },
 	});
 
+	const [comments, setComments] = useState([[], []]);
+
 	const toggleLike = (postId) => {
 		setLikeCounts((prevState) => ({
 			...prevState,
@@ -28,6 +30,17 @@ const Status = () => {
 			[postId === "post1" ? "post2" : "post1"]:
 				prevState[postId === "post1" ? "post2" : "post1"],
 		}));
+	};
+
+	const handleInputChange = () => {};
+
+	const handleKeyPress = (e, postId) => {
+		if (e.key === "Enter") {
+			const newComments = [...comments];
+			newComments[postId] = [...newComments[postId], e.target.value];
+			setComments(newComments);
+			e.target.value = "";
+		}
 	};
 
 	return (
@@ -110,6 +123,28 @@ const Status = () => {
 						</div>
 					</div>
 					<div className={classes.border}></div>
+
+					{comments[0].map((comment, index) => (
+						<div key={index} className={classes.postComments}>
+							<div className={classes.content}>
+								<div className={classes.wrapimg}>
+									<img
+										className={classes.avatar}
+										src={maci}
+										alt="your-image"
+									/>
+								</div>
+								<div className={classes.yourComments}>
+									<div className={classes.wrapContent}>
+										<span className={classes.text}>
+											{comment}
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					))}
+
 					<div className={classes.group}>
 						<div className={classes.box}>
 							<img
@@ -123,6 +158,7 @@ const Status = () => {
 								className={classes.search}
 								type="text"
 								placeholder="Write a comment..."
+								onKeyPress={(e) => handleKeyPress(e, 0)}
 							/>
 						</div>
 					</div>
@@ -206,6 +242,26 @@ const Status = () => {
 						</div>
 					</div>
 					<div className={classes.border}></div>
+
+					{comments[1].map((comment, index) => (
+						<div key={index} className={classes.postComments}>
+							<div className={classes.content}>
+								<div className={classes.wrapimg}>
+									<img
+										className={classes.avatar}
+										src={maci}
+										alt="your-image"
+									/>
+								</div>
+								<div className={classes.yourComments}>
+									<span className={classes.text}>
+										{comment}
+									</span>
+								</div>
+							</div>
+						</div>
+					))}
+
 					<div className={classes.group}>
 						<div className={classes.box}>
 							<img
@@ -219,6 +275,8 @@ const Status = () => {
 								className={classes.search}
 								type="text"
 								placeholder="Write a comment..."
+								onChange={handleInputChange}
+								onKeyPress={(e) => handleKeyPress(e, 1)}
 							/>
 						</div>
 					</div>

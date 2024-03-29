@@ -12,7 +12,7 @@ import AddStatus from "../addStatus/AddStatus";
 const Main = ({ isChatVisible, isNotificationsVisible }) => {
 	const [popUp, setPopUp] = useState(false);
 	const [posts, setPosts] = useState([]);
-
+	
 	const handlePostContentChange = (content) => {
 		const id = Date.now().toString();
 		setPosts([...posts, { id, content }]);
@@ -23,6 +23,7 @@ const Main = ({ isChatVisible, isNotificationsVisible }) => {
 		const updatedPosts = posts.filter((post) => post.id !== content);
 		setPosts(updatedPosts);
 	};
+
 
 	return (
 		<div className={classes.mainContainer}>

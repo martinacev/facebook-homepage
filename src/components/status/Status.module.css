@@ -17,7 +17,6 @@
 	border-radius: 5px;
 }
 
-
 .wrapper {
 	display: flex;
 	width: 100%;
@@ -93,7 +92,7 @@
 	display: flex;
 	align-items: center;
 	width: 30px;
-    justify-content: center;
+	justify-content: center;
 	height: 30px;
 	border-radius: 20px;
 }
@@ -103,9 +102,7 @@
 	align-items: center;
 	width: 30px;
 	height: 20px;
-	
 }
-
 
 .svg:hover {
 	background-color: #3a3b3c;
@@ -195,7 +192,7 @@
 }
 
 .box {
-	display: flex;	
+	display: flex;
 	margin-right: 5px;
 }
 
@@ -213,6 +210,32 @@
 	display: flex;
 }
 
+.comments {
+	display: flex;
+}
+
+.sectionCom {
+	display: flex;
+	background-color: #3a3b3c;
+}
+
+.comImg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.aboutwrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.yourName {
+	font-size: 12px;
+	font-weight: bold;
+}
+
 .search {
 	display: flex;
 	align-items: center;
@@ -222,6 +245,7 @@
 	height: 35px;
 	border: none;
 	outline: none;
+	color: #fff;
 }
 
 .search::placeholder {
@@ -229,7 +253,7 @@
 	color: #acafb3;
 	display: flex;
 	align-items: center;
-	padding-left: 10px;
+	padding-left: 15px;
 }
 
 .photo {
@@ -238,3 +262,35 @@
 }
 
 
+.postComents {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin: 0;
+}
+
+.yourComments {
+	word-wrap: break-word;
+	border-radius: 20px;
+	margin: 5px 5px;
+	padding: 5px 5px;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	border-radius: 20px;
+}
+
+.wrapimg {
+	margin-left: 10px;
+}
+
+.wrapContent {
+	width: fit-content;
+	max-width: 600px;
+	background-color: #3a3b3c;
+	padding: 5px 10px;
+	border-radius: 20px;
+}
