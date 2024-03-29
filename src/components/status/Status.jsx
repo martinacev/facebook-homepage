@@ -15,7 +15,6 @@ const Status = () => {
 		post1: { count: 0, liked: false },
 		post2: { count: 0, liked: false },
 	});
-
 	const [comments, setComments] = useState([[], []]);
 
 	const toggleLike = (postId) => {
@@ -257,9 +256,14 @@ const Status = () => {
 									/>
 								</div>
 								<div className={classes.yourComments}>
-									<span className={classes.text}>
-										{comment}
-									</span>
+									<div className={classes.wrapContent}>
+										<p className={classes.profile}>
+											Martin Acevski
+										</p>
+										<span className={classes.text}>
+											{comment}
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
